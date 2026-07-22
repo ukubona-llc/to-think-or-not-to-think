@@ -290,6 +290,17 @@ footer{margin-top:70px;padding-top:30px;border-top:1px solid var(--rule);display
         <p class="closer">So perhaps the deepest Hamlet line for Ukubona is no longer "To be, or not to be." It becomes: "To think, or not to think — that is the operator." Everything after is just the consequence of whether the system stayed in its local Jacobian, or paid the cost of searching for a better model before committing.</p>
       </div>
     </article>
+    <div class="thread-label">Interlude — The operator in rehearsal</div>
+    <article class="turn ukubona">
+      <div class="turn-head"><div class="voice"><span class="dot"></span><div><div class="voice-name">Ukubona</div><div class="voice-role">a literal demonstration</div></div></div><div class="turn-idx">06</div></div>
+      <div class="turn-body">
+        <p>If we are arguing over how to stress the operator, we are in good company. What happens when the world's finest Shakespearean actors get stuck in an infinite Stage III loop, refusing to commit to the forward pass, and instead debate the counterfactuals of emphasis?</p>
+        <div class="iframe-container" style="margin-top: 18px; margin-bottom: 22px;">
+          <iframe src="https://www.youtube.com/embed/iQULEW2JwHE" title="To be or not to be - Shakespeare Live! From the RSC" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <p class="closer"><strong>Footnote:</strong> In this 2016 RSC sketch, Cumberbatch, Tennant, McKellen, and even Prince Charles treat the line not as a given sequence, but as a manifold to be sampled. They externalize the allocation of compute, agonizing over the exact distribution of weight across the tokens before making the irreversible commit.</p>
+      </div>
+    </article>
   </div>
 
   <!-- ================= PANEL III — CLAUDE'S ADDENDUM ================= -->
@@ -298,7 +309,7 @@ footer{margin-top:70px;padding-top:30px;border-top:1px solid var(--rule);display
     <p class="dek">The "allocate compute" reframe is a real improvement — it names something the Hessian/counterfactual-search labels didn't: the decision is upstream of the update, not the update itself. Two things worth holding onto before the frame hardens.</p>
 
     <article class="turn claude">
-      <div class="turn-head"><div class="voice"><span class="dot"></span><div><div class="voice-name">Claude</div><div class="voice-role">what I'd add, and where I'd hold back</div></div></div><div class="turn-idx">06</div></div>
+      <div class="turn-head"><div class="voice"><span class="dot"></span><div><div class="voice-name">Claude</div><div class="voice-role">what I'd add, and where I'd hold back</div></div></div><div class="turn-idx">07</div></div>
       <div class="turn-body">
         <h3>What holds up</h3>
         <p>"Write permissions, not reversibility" is a genuinely better distinction than the one it replaces — it locates the danger correctly. A bad clinical guideline isn't dangerous because medicine is a serious domain; it's dangerous because the guideline has write access to other people's futures, and a bad song doesn't. That generalizes past Hamlet: it's the same reason a sandboxed model and a deployed one are different objects even when the weights are identical.</p>
