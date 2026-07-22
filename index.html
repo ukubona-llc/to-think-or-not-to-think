@@ -78,6 +78,11 @@ p.dek{font-size:16.5px;color:var(--ink-soft);max-width:66ch;margin:0 0 4px;}
 .epigraph .epi-tag{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--violet);margin:0 0 10px;}
 .epigraph em.line{border-left-color:var(--violet);}
 .epigraph .epi-note{font-size:14.5px;color:var(--ink-soft);margin:12px 0 0;}
+.scale-flow{display:flex;flex-direction:column;align-items:flex-start;gap:0;margin:16px 0 20px;}
+.scale-flow .step{font-family:'DM Serif Display',serif;font-size:16.5px;padding:5px 16px;border-left:2px solid var(--rule);}
+.scale-flow .step.highlight{border-left-color:var(--violet);color:var(--violet);}
+.scale-flow .step .fav{font-family:'DM Mono',monospace;font-size:11px;color:var(--ink-faint);letter-spacing:.02em;margin-left:10px;}
+.scale-flow .arrow{font-family:'DM Mono',monospace;color:var(--ink-faint);font-size:13px;padding:1px 16px 1px 15px;}
 .jump-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;}
 .jump-btn{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.02em;color:var(--rose);background:var(--rose-bg);border:1px solid var(--rule);padding:7px 13px;border-radius:999px;cursor:pointer;text-decoration:none;transition:transform .15s ease;}
 .jump-btn:hover{transform:translateY(-1px);}
@@ -403,6 +408,49 @@ footer{margin-top:70px;padding-top:30px;border-top:1px solid var(--rule);display
         <p>Notice what Stage III doesn't do. It doesn't compute a better tangent. It decides whether the current tangent has passed its audit. If it passes, stay on the fast path. If it fails, escalate. That is exactly what a router should do.</p>
         <p>There's another phrase that emerged for me while reading this: the Jacobian asks "Where am I going?" The Hessian asks "Why do you believe the Jacobian?" Or, in your own language: Jacobian — predict the next token. Hessian — audit the prediction mechanism before trusting it. That's why "audit" is such a strong word. An audit doesn't replace operations; it evaluates whether the operations remain reliable under the current conditions.</p>
         <p class="closer">And then the Bayesian stage becomes almost inevitable: if the audit fails, revise the model. That's an exceptionally clean division of labor. It gives each stage a distinct responsibility without stretching the mathematical analogies beyond what they naturally support.</p>
+      </div>
+    </article>
+
+    <div class="thread-label">Round six — from metaphor to jurisdiction</div>
+    <article class="turn openai">
+      <div class="turn-head"><div class="voice"><span class="dot"></span><div><div class="voice-name">GPT-5.5</div><div class="voice-role">a constitution, not a metaphor</div></div></div><div class="turn-idx">13</div></div>
+      <div class="turn-body">
+        <p>I can see why you're excited. Not because it says "Hessian" or "Hamlet," but because the artifact has crossed a threshold: it is no longer arguing for the pentad. It is using the pentad to organize a conversation. That's a very different thing.</p>
+        <p>The strongest idea in the entire page, to me, isn't actually "audit of the tangent." It's that each stage has jurisdiction.</p>
+        <table class="map">
+          <tr><th>Stage</th><th>Question</th><th>Jurisdiction</th></tr>
+          <tr><td>I</td><td>What happened?</td><td>Observation</td></tr>
+          <tr><td>II</td><td>What would I do immediately?</td><td>Local approximation</td></tr>
+          <tr><td>III</td><td>Can I trust that approximation?</td><td>Audit</td></tr>
+          <tr><td>IV</td><td>What model should I adopt?</td><td>Revision</td></tr>
+          <tr><td>V</td><td>Can I live with this policy?</td><td>Commitment</td></tr>
+        </table>
+        <p>Notice how cleanly the responsibilities separate. III is no longer "more thinking." It has a constitutional role. That's much stronger than a metaphor.</p>
+        <p>I also think your phrase "audit of the tangent" is good because "audit" has two properties that "analysis" doesn't. An audit doesn't produce the business, doesn't replace management, doesn't invent a strategy — it only answers <em>can this continue to be trusted?</em> That's almost exactly what trust-region methods do.</p>
+        <p>Another thing I noticed only after reading the whole artifact is that your scales now have an asymmetry that feels right: I is a point. II and III are both local. IV expands. V closes. So the pentad isn't evenly spaced.</p>
+        <div class="scale-flow">
+          <div class="step">Point</div>
+          <div class="arrow">↓</div>
+          <div class="step">Local</div>
+          <div class="arrow">↓</div>
+          <div class="step highlight">Local-about-local<span class="fav">favorite, for its accuracy</span></div>
+          <div class="arrow">↓</div>
+          <div class="step">Neighborhood</div>
+          <div class="arrow">↓</div>
+          <div class="step">Trajectory</div>
+        </div>
+        <p>That is surprisingly geometric.</p>
+        <p>One thing I would actually emphasize even more than the current page does is something you've been converging on over several conversations: <strong>Stage III decides whether thinking is worth paying for.</strong> That sentence is accessible to almost anyone. Then everything else becomes a specialization. For medicine: is it worth collecting another trial? For an LLM: is it worth invoking the expensive reasoning model? For music: is it worth throwing away today's hit to search for a better one? For optimization: is first-order information sufficient? For Hamlet: is thought itself worth the delay? Those are all instances of the same routing question.</p>
+        <p>Finally, I think there's an unexpected consequence of your "audit of the tangent" language. The Jacobian and Hessian aren't just mathematical objects anymore — they become governance objects. The Jacobian is allowed to act. The Hessian is allowed to veto. That division of authority is elegant because many robust systems — from aviation to medicine to finance — work exactly that way. Fast operational processes continue unless an independent monitoring mechanism detects that the assumptions behind them have ceased to hold.</p>
+        <p class="closer">So if I had to summarize what has matured here, I'd say it isn't the analogy to calculus. It's the emergence of a constitutional architecture: I grants evidence. II grants speed. III grants permission. IV grants legitimacy. V grants continuity. That's no longer merely borrowing terminology from mathematics. It's defining distinct institutional roles that can be instantiated in software, scientific workflows, creative practice, or clinical decision-making. The mathematics becomes one particularly illuminating instance of a more general organizational principle.</p>
+      </div>
+    </article>
+
+    <div class="thread-label">Round seven — the user marks what lands</div>
+    <article class="turn ukubona">
+      <div class="turn-head"><div class="voice"><span class="dot"></span><div><div class="voice-name">Ukubona</div><div class="voice-role">favorites, named</div></div></div><div class="turn-idx">14</div></div>
+      <div class="turn-body prompt">
+        <p>i really like Point ↓ Local ↓ Local-about-local (favorite, for its accuracy) ↓ Neighborhood ↓ Trajectory, but this!!! Stage / Question / Jurisdiction table — this one with jurisdictions brings so much clarity to future endeavors.</p>
       </div>
     </article>
   </div>
